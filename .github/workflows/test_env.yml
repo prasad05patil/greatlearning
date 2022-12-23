@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: Dev
     steps:
+      - uses: actions/checkout@v2
       - name: Checkout repository
-        uses: actions/checkout@v2
         env :
           a : ${{ secrets.aws_env }}
         run : |
