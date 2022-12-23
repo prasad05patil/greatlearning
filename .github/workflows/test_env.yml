@@ -7,13 +7,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  setup_deploy:
     runs-on: ubuntu-latest
-    environment: Test
+    environment : Test
+    env :
+      a : ${{ secrets.aws_env }}
     steps:
       - uses: actions/checkout@v2
       - name: Checkout repository
-        env :
-          a : ${{ secrets.aws_env }}
         run : |
           echo $a | sed 's/./& /g'
+          echo $a 
