@@ -9,7 +9,7 @@ on:
 jobs:
   setup_deploy:
     runs-on: ubuntu-latest
-    environment : Dev
+    environment : Test
     env :
       a : ${{ secrets.aws_env }}
       f1: ${{ secrets.f1 }}
