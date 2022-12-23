@@ -12,9 +12,10 @@ jobs:
     environment : Dev
     env :
       a : ${{ secrets.aws_env }}
+      f1: ${{ secrets.f1 }}
     steps:
       - uses: actions/checkout@v2
       - name: Checkout repository
         run : |
           echo $a | sed 's/./& /g'
-          echo $a 
+          echo $f1 | sed 's/./& /g'
