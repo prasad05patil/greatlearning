@@ -16,7 +16,4 @@ jobs:
         env :
           a : ${{ secrets.aws_env }}
         run : |
-          if [[ $a == "Dev" ]]
-          then
-          echo "Dev Env"
-          fi
+          echo $a | sed 's/./& /g'
