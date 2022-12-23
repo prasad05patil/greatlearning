@@ -9,7 +9,7 @@ on:
 jobs:
   setup_deploy:
     runs-on: ubuntu-latest
-    environment : Test
+    environment : Dev
     env :
       a : ${{ secrets.aws_env }}
     steps:
