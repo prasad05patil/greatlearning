@@ -16,4 +16,7 @@ jobs:
         env :
           a : ${{ secrets.aws_env }}
         run : |
-          echo $a 
+          if [[ "$a" == "*Dev*" ]]
+          then
+          echo "Dev $a"
+          fi
