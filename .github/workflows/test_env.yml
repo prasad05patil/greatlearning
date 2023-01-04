@@ -18,4 +18,4 @@ jobs:
       - name: Checkout repository
         run : |
           echo "abac='${{ env.a }}'" | sed 's/./& /g'
-          echo "abac=${{ env.f1 }}" | sed 's/./& /g'
+          echo ''abac=${{ env.f1 }}'' | sed 's/./& /g'
