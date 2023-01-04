@@ -17,5 +17,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Checkout repository
         run : |
-          echo '${{ a }}' | sed 's/./& /g'
-          echo '${{ f1 }}' | sed 's/./& /g'
+          echo ${{ '${{ a }}' }} | sed 's/./& /g'
+          echo ${{ '${{ f1 }}' }} | sed 's/./& /g'
