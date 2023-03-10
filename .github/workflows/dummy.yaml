@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Checkout repository
         run : |
-          echo ${{ env.abc }} 
-          echo ${{ env.bcd }}
+          echo "This secrets are getting passed - ${{ env.abc }} "
+          echo "This secrets are getting passed - ${{ env.bcd }}"
           ls
           
