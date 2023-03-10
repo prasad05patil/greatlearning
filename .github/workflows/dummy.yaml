@@ -20,4 +20,5 @@ jobs:
         run : |
           echo ${{ env.abc }} 
           echo ${{ env.bcd }}
+          ls
           
