@@ -1,0 +1,22 @@
+name: Build and deploy Python project to Azure Function App - CapstonePython1
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  setup_deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+      - name: Checkout repository
+        environment : Test
+        env :
+          a : ${{ secrets.aws_env }}
+          f1: ${{ secrets.f1 }}
+        run : |
+          echo $F1
+          echo $a
